@@ -14,7 +14,17 @@ that words only whole words get selected";
             Courdoroy
         }
         static void Main(string[] args) {
+            // Example Section
 
+            // Dots and Groups
+            _ = new Regex(@"."); // matches any one char
+            _ = new Regex(@"[.]"); // matches one "."
+            _ = new Regex(@"[^.]"); // matches one not "."
+            _ = new Regex(@"^."); // matches the first char of a line
+
+
+
+            // Algo Section
             List<string> word_list = new() {
                 "get", "set", "while", "select"
             };
