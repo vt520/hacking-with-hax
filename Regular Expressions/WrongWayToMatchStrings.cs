@@ -10,7 +10,7 @@ namespace Regular_Expressions {
             int first_open = text.IndexOf('<', start);
             int second_open = text.IndexOf('<', first_open);
             int close = text.IndexOf('>', start);
-            if (second_open < close) return GetTag(text, second_open);
+            if (second_open < close) return GetTag(text, second_open); // this is important 
             return (first_open, close);
         }
     }
