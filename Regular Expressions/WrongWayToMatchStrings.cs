@@ -28,11 +28,11 @@ namespace Regular_Expressions {
          *  
          */
         public static (int open, int close) GetTag(string text, int start = 0) {
-            int first_open = text.IndexOf('<', start);
-            int second_open = text.IndexOf('<', first_open);
+            int open = text.IndexOf('<', start);
+            int next_open = text.IndexOf('<', open);
             int close = text.IndexOf('>', start);
-            if (second_open < close) return GetTag(text, second_open); // this is important 
-            return (first_open, close);
+            if (next_open < close) return GetTag(text, next_open); // this is important 
+            return (open, close);
         }
 
         public WrongWayToMatchStrings() { }
